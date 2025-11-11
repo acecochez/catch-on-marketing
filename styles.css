@@ -3,6 +3,7 @@
 		font-family: 'Poppins', sans-serif;
 		overflow-x: hidden;
 	}
+	
 
 /* Header Text Styling */
 	h1, h2, h3 {
@@ -50,7 +51,12 @@
 					background-color: #E5E7EB;
 					cursor: pointer;
 				}
-
+				
+	 .nav-active {
+		 background-color: #E5E7EB;
+		 border: 1px solid #ebc572;
+	 }
+				
 /* Request Button Styling */
 	.request-btn {
 		background: linear-gradient(135deg, #ebc572, #8b7b58);
