@@ -726,6 +726,8 @@ body.modal-open {
     position: absolute;
     inset: 0;
     background: rgba(0, 0, 0, 0.6);
+    /* ensure backdrop stays below dialog */
+    z-index: 1;
 }
 
 .modal-dialog {
@@ -739,6 +741,8 @@ body.modal-open {
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    /* float the dialog over the backdrop */
+    z-index: 2;
 }
 
 .modal-title {
