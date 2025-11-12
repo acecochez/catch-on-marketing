@@ -1,10 +1,8 @@
-/* Main Styling */
 body {
     font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
 }
 
-/* Header Text Styling */
 h1, h2, h3 {
     font-weight: normal;
 }
@@ -13,12 +11,22 @@ h2 {
     font-size: 30px;
 }
 
-/* Subtitle Styling */
-#subtitle {
-    color: #6B7280;
+#one h1 {
+    color: white;
 }
 
-/* Navigation Styling */
+/* Glowing gold effect for hero ticker */
+.glow-gold {
+    color: #ebc572 !important; /* brand gold */
+    text-shadow: 0 0 6px rgba(235, 197, 114, 0.9),
+                 0 0 12px rgba(235, 197, 114, 0.6),
+                 0 0 20px rgba(235, 197, 114, 0.35);
+}
+
+#one #subtitle {
+    color: #E5E7EB;
+}
+
 nav {
     padding: 15px;
     border-bottom: 1px solid #E5E7EB;
@@ -27,13 +35,12 @@ nav {
     z-index: 1;
 }
 
-/* Mobile nav toggle (checkbox hack) */
 .nav-toggle {
     display: none;
 }
 
 .nav-toggle-label {
-    display: none; /* hidden on desktop, shown on mobile */
+    display: none;
     cursor: pointer;
     user-select: none;
     padding: 10px 12px;
@@ -49,19 +56,22 @@ nav {
     margin: 5px 0;
 }
 
-/* List Style */
 nav ul, #footer-nav {
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
-/* List Item Style */
-nav li, #footer li {
+nav li {
     display: inline;
 }
 
-/* Link Style */
+nav li img {
+    width: 50px;
+    margin-bottom: -15px;
+    padding-right: 10px;
+}
+
 nav a {
     text-decoration: none;
     color: black;
@@ -78,7 +88,6 @@ nav a:hover {
     border: 1px solid #ebc572;
 }
 
-/* Request Button Styling */
 .request-btn {
     background: linear-gradient(135deg, #ebc572, #8b7b58);
     border-color: #8b7b58;
@@ -109,29 +118,26 @@ nav a:hover {
     cursor: pointer;
 }
 
-/* Request Button in Navigation Styling */
 #nav-invite {
     padding: 10px;
     font-size: 15px;
 }
 
-#footer-invite {
+#footer-invite, #footer-invite\ 2 {
     text-decoration: none;
     color: white;
 }
 
-/* Center Request Button in First Section  */
 .quarter-section .request-btn {
-    margin-left: 25%;
+    text-decoration: none;
+    color: white;
 }
 
-/* Page Sectioning Styling */
 .section {
     padding: 80px;
     height: 400px;
 }
 
-/* Divide Sectioning into a Vertical Quarter */
 .quarter-section {
     width: 25%;
 }
@@ -141,10 +147,28 @@ nav a:hover {
     float: right;
 }
 
-/* Page Sections Styling */
 #one {
     overflow: hidden;
     font-size: 20px;
+    position: relative;
+    background-image: var(--hero-bg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.section#one::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, var(--hero-overlay, 0.5));
+    pointer-events: none;
+    z-index: 0;
+}
+
+.section#one > * {
+    position: relative;
+    z-index: 1;
 }
 
 #two {
@@ -156,7 +180,6 @@ nav a:hover {
     background-color: white;
 }
 
-/* Colour Blob Styling */
 #blob {
     width: 900px;
     margin-top: -160%;
@@ -194,9 +217,6 @@ nav a:hover {
     margin-left: -20rem;
 }
 
-
-/* Card Styling */
-/* Card Container */
 .card-container {
     position: relative;
     display: flex;
@@ -231,7 +251,6 @@ nav a:hover {
     overflow: hidden;
 }
 
-/* Package tiles on About page */
 .card-container .package {
     flex: 1 1 240px;
     max-width: 300px;
@@ -257,7 +276,6 @@ nav a:hover {
     display: block;
 }
 
-/* Packages slider */
 .packages-slider {
     position: relative;
     width: 100%;
@@ -308,7 +326,6 @@ nav a:hover {
         max-height: 460px;
     }
 }
-
 
 .slider-arrow {
     position: absolute;
@@ -399,7 +416,7 @@ nav a:hover {
         margin: 0;
     }
 
-    nav li a {
+    nav li a, nav li img {
         display: block;
         padding: 12px 8px;
         font-size: 16px;
@@ -519,9 +536,7 @@ nav a:hover {
         text-align: left;
     }
 
-    /* Slider images on mobile */
     .packages-slider .package img {
-        /* Keep mobile comfortable and readable */
         max-height: 42vh;
         max-width: 95%;
     }
@@ -538,6 +553,13 @@ nav a:hover {
         max-width: 90%;
     }
 
+    nav li img {
+        width: 0;
+        height: 0;
+        margin: 0;
+        padding: 0;
+    }
+
 }
 
 .quotes-ticker .quote-author {
@@ -545,4 +567,188 @@ nav a:hover {
     margin-top: 0.35em;
     font-size: 0.9em;
     color: #666666;
+}
+
+.quotes-ticker {
+    background-color: white;
+}
+
+body.modal-open {
+    overflow: hidden;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    z-index: 1000;
+}
+
+.modal.open {
+    display: block;
+}
+
+.modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: saturate(120%) blur(1px);
+    z-index: 1;
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% - 48px);
+    max-width: 560px;
+    max-height: 85vh;
+    overflow: auto;
+    background: #ffffff;
+    color: #111827;
+    border-radius: 16px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+    padding: 28px 24px 24px;
+    z-index: 2;
+    animation: modal-pop 220ms ease-out;
+}
+
+.modal-content h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.modal-content p {
+    margin: 0 0 16px 0;
+    color: #374151;
+}
+
+.modal-close {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    border: 0;
+    background: transparent;
+    color: #6B7280;
+    font-size: 28px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.modal-close:hover {
+    color: #111827;
+}
+
+#welcome-modal-cta,
+.modal-content .request-btn {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 6px;
+}
+
+@keyframes modal-pop {
+    from {
+        transform: translate(-50%, -46%) scale(0.98);
+        opacity: 0;
+    }
+    to {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .modal-content {
+        width: calc(100% - 32px);
+        padding: 22px 18px 18px;
+        border-radius: 14px;
+        max-height: 82vh;
+    }
+
+    .modal-close {
+        top: 6px;
+        right: 8px;
+        font-size: 26px;
+    }
+
+    .quarter-section .request-btn {
+        margin-bottom: 10px;
+    }
+}
+
+
+.modal {
+    position: fixed;
+    inset: 0;
+    display: none;
+    z-index: 1000;
+}
+
+.modal.open, .modal[aria-hidden="false"] {
+    display: block;
+}
+
+.modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.modal-dialog {
+    position: relative;
+    width: min(900px, 92vw);
+    height: min(80vh, 900px);
+    margin: 6vh auto 0;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.modal-title {
+    margin: 0;
+    padding: 16px 56px 12px 16px;
+    font-size: 1.25rem;
+    border-bottom: 1px solid #eee;
+}
+
+.modal-close {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: none;
+    background: transparent;
+    color: #333;
+    font-size: 28px;
+    line-height: 36px;
+    cursor: pointer;
+}
+
+.modal-close:hover {
+    background: rgba(0, 0, 0, 0.06);
+}
+
+.modal-body {
+    flex: 1;
+}
+
+#signup-form-frame {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+}
+
+body.modal-open {
+    overflow: hidden;
 }

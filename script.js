@@ -139,3 +139,75 @@ const TICKER_DATA = {
 		}
 	});
 })();
+
+
+
+// H1 ticker: type/delete effect cycling specific texts
+(function initH1Ticker(){
+    const el = document.getElementById('h1-ticker');
+    if (!el) return;
+
+    const config = {
+        texts: [
+            'Catch-On',
+            'Get Hooked',
+            'Anchor'
+        ],
+        typeSpeed: 90,       // ms per character while typing
+        deleteSpeed: 60,     // ms per character while deleting
+        pauseAfterType: 1200, // pause when a word is fully typed
+        pauseAfterDelete: 350 // pause after deletion before next word
+    };
+
+    let wordIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+
+    function applyStyleForCurrentWord(fullWord){
+        // Toggle glowing gold only for "Catch-On"; others stay white (inherited)
+        if (fullWord === 'Catch-On') {
+            el.classList.add('glow-gold');
+        } else {
+            el.classList.remove('glow-gold');
+        }
+    }
+
+    function tick(){
+        const fullWord = config.texts[wordIndex % config.texts.length];
+        applyStyleForCurrentWord(fullWord);
+
+        if (isDeleting) {
+            charIndex = Math.max(0, charIndex - 1);
+        } else {
+            charIndex = Math.min(fullWord.length, charIndex + 1);
+        }
+
+        el.textContent = fullWord.substring(0, charIndex);
+
+        // Determine next delay
+        let delay = isDeleting ? config.deleteSpeed : config.typeSpeed;
+
+        // Word completed
+        if (!isDeleting && charIndex === fullWord.length) {
+            delay = config.pauseAfterType;
+            isDeleting = true;
+        }
+        // Word fully deleted
+        else if (isDeleting && charIndex === 0) {
+            delay = config.pauseAfterDelete;
+            isDeleting = false;
+            wordIndex = (wordIndex + 1) % config.texts.length;
+        }
+
+        setTimeout(tick, delay);
+    }
+
+    // Start after DOM is ready to avoid flashes
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', tick);
+    } else {
+        tick();
+    }
+})();
+
+

@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- displays site properly based on user's device -->
 
-	<link rel="icon" type="image/png" sizes="32x32" href="./images/1.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="./images/full-logo.png">
 
 	<title>Catch-On Marketing</title>
 
@@ -23,27 +23,29 @@
 		<span class="bar"></span>
 	</label>
 	<ul id="primary-navigation">
+		<li><img alt="logo" style="height: 50px; padding-bottom: 0;" src="./images/full-logo.png"></li>
 		<li><a href="index.html" id="nav-home">Home</a></li>
 		<li><a href="about.html" id="nav-about" class="nav-active">About</a></li>
 		<li><a href="careers.html" id="nav-careers">Careers</a></li>
 
-		<li style="float: right;"><a href="https://www.instagram.com/catch.on.hooks/#" id="nav-invite"
-		                             class="request-btn">Scale Today</a></li>
+		<li style="float: right;">
+			<a href="https://www.instagram.com/catch.on.hooks/#" id="nav-invite" class="request-btn">Scale Today</a>
+		</li>
 	</ul>
 </nav>
 
-<div class="section" id="one">
+<div class="section" id="one" style="--hero-bg: url('./images/clients.jpg'); --hero-overlay: 0.55;">
 	<div class="quarter-section">
 		<h1>Testimonials</h1>
-		<p class="subtitle">Have a look through our latest testimonials from our verified clients below!</p>
+		<p id="subtitle">Have a look through our latest testimonials from our verified clients below!</p>
 		<!-- Simple quotes ticker populated by script.js -->
 		<div id="testimonials-ticker" class="quotes-ticker" aria-live="polite"></div>
-		<button class="request-btn" style="margin-top: 10px;"><a id="footer-invite" href="https://www.instagram.com/catch.on.hooks/#">Scale Today</a></button>
+		<button class="request-btn" style="margin-top: 10px;">
+			<a id="footer-invite" href="https://www.instagram.com/catch.on.hooks/#">Scale Today</a>
+		</button>
 
 	</div>
-	<div class="right-quarter-section">
-		<img alt="about-img" id="about-img" src="./images/1.png">
-	</div>
+	<div class="right-quarter-section"></div>
 </div>
 
 <div class="section" id="two about">
@@ -53,19 +55,20 @@
 	<div class="packages-slider" aria-label="Packages slider">
 		<button class="slider-arrow prev" aria-label="Previous package" type="button">&#10094;</button>
 		<div class="slides" role="group" aria-roledescription="carousel">
-   <div class="package" role="group" aria-label="1 of 4">
-                <img alt="package-1" src="./images/2(1).png">
-            </div>
-            <div class="package" role="group" aria-label="2 of 4">
-                <img alt="package-2" src="./images/3(1).png">
-            </div>
-            <div class="package" role="group" aria-label="3 of 4">
-                <img alt="package-3" src="./images/website.png">
-            </div>
-           <div id="text-package" class="package" role="group" aria-label="4 of 4">
-               <h2>Portfolio Creation</h2>
-               <p>We can help you create a professional portfolio site to showcase your skills. Designed to help people get bookings or jobs, separate to regular website creation</p>
-           </div>
+			<div class="package" role="group" aria-label="1 of 4">
+				<img alt="package-1" src="./images/essentials.png">
+			</div>
+			<div class="package" role="group" aria-label="2 of 4">
+				<img alt="package-2" src="./images/hook-suite.png">
+			</div>
+			<div class="package" role="group" aria-label="3 of 4">
+				<img alt="package-3" src="./images/website.png">
+			</div>
+			<div id="text-package" class="package" role="group" aria-label="4 of 4">
+				<h2>Portfolio Creation</h2>
+				<p>We can help you create a professional portfolio site to showcase your skills. Designed to help people
+					get bookings or jobs, separate to regular website creation</p>
+			</div>
 		</div>
 		<button class="slider-arrow next" aria-label="Next package" type="button">&#10095;</button>
 	</div>

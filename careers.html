@@ -12,79 +12,6 @@
 	<link rel="stylesheet" href="./styles.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
 
-	<!-- Inline styles for the Sign Up modal (scoped to this page) -->
-	<style>
-        .modal {
-            position: fixed;
-            inset: 0;
-            display: none;
-            z-index: 1000;
-        }
-
-        .modal.open, .modal[aria-hidden="false"] {
-            display: block;
-        }
-
-        .modal-backdrop {
-            position: absolute;
-            inset: 0;
-            background: rgba(0, 0, 0, 0.6);
-        }
-
-        .modal-dialog {
-            position: relative;
-            width: min(900px, 92vw);
-            height: min(80vh, 900px);
-            margin: 6vh auto 0;
-            background: #fff;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
-            display: flex;
-            flex-direction: column;
-            overflow: hidden;
-        }
-
-        .modal-title {
-            margin: 0;
-            padding: 16px 56px 12px 16px;
-            font-size: 1.25rem;
-            border-bottom: 1px solid #eee;
-        }
-
-        .modal-close {
-            position: absolute;
-            top: 8px;
-            right: 10px;
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
-            border: none;
-            background: transparent;
-            color: #333;
-            font-size: 28px;
-            line-height: 36px;
-            cursor: pointer;
-        }
-
-        .modal-close:hover {
-            background: rgba(0, 0, 0, 0.06);
-        }
-
-        .modal-body {
-            flex: 1;
-        }
-
-        #signup-form-frame {
-            width: 100%;
-            height: 100%;
-            border: 0;
-            display: block;
-        }
-
-        body.modal-open {
-            overflow: hidden;
-        }
-	</style>
 </head>
 <body>
 
@@ -97,6 +24,7 @@
 		<span class="bar"></span>
 	</label>
 	<ul id="primary-navigation">
+		<li><img alt="logo" style="height: 50px; padding-bottom: 0;" src="./images/1.png"></li>
 		<li><a href="index.html" id="nav-home">Home</a></li>
 		<li><a href="about.html" id="nav-about">About</a></li>
 		<li><a href="careers.html" id="nav-careers" class="nav-active">Careers</a></li>
@@ -107,20 +35,17 @@
 </nav>
 
 
-<div class="section" id="one">
+<div class="section" id="one" style="--hero-bg: url('./images/work.jpg'); --hero-overlay: 0.55;">
 
-	<div class="quarter-section">
-		<h1>Catch-on Careers</h1>
+    <div class="quarter-section">
+        <h1>Catch-on Careers</h1>
 
 		<p id="subtitle">Currently, all our careers require you to be a lead generator for our business. In further
 			roles, you will
 			then be working with clients you generate.</p>
 	</div>
 
-	<div class="right-quarter-section">
-		<img alt="careers-img" id="careers-img"
-		     src="https://online.hbs.edu/Style%20Library/api/resize.aspx?imgpath=/PublishingImages/blog/posts/digital-marketing-skills.jpg&w=1200&h=630">
-	</div>
+    <div class="right-quarter-section"></div>
 
 </div>
 
