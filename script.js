@@ -1,7 +1,7 @@
 const TICKER_DATA = {
 	testimonials: [
 		{quote: 'An amazing opportunity!..', author: '@iamkatiebrinkley, 8k+ Followers'},
-		{quote: 'Amazing bundle and worth more than the $$...', author: '@chill_mindset, Motivational Brand'},
+		{quote: 'Amazing, worth more than the $$...', author: '@chill_mindset, Motivational Brand'},
 		{quote: 'Learn from the best!..', author: '@hustleadmins, Pro DayTrader'}
 	],
 	intervalMs: 2500 // Change the speed here (in milliseconds)

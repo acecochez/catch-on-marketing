@@ -291,11 +291,24 @@ nav a:hover {
     object-fit: contain;
 }
 
+#text-package {
+    background-color: #8b7b58;
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    display: inline-block !important;
+    max-width: 400px;
+    max-height: 400px;
+    margin-left: 25%;
+}
+
+
 @media screen and (min-width: 1200px) {
     .packages-slider .package img {
         max-height: 460px;
     }
 }
+
 
 .slider-arrow {
     position: absolute;
@@ -518,6 +531,11 @@ nav a:hover {
         height: 44px;
         line-height: 44px;
         font-size: 22px;
+    }
+
+    #text-package {
+        margin-left: 0;
+        max-width: 90%;
     }
 
 }
