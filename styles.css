@@ -1,6 +1,7 @@
 body {
     font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
+    background-color: #121212;
 }
 
 h1, h2, h3 {
@@ -29,7 +30,7 @@ h2 {
 
 nav {
     padding: 15px;
-    border-bottom: 1px solid #E5E7EB;
+    border-bottom: 1px solid #ebc572;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     position: relative;
     z-index: 1;
@@ -52,7 +53,7 @@ nav {
     display: block;
     width: 24px;
     height: 2px;
-    background: #111827;
+    background: #ebc572;
     margin: 5px 0;
 }
 
@@ -74,17 +75,17 @@ nav li img {
 
 nav a {
     text-decoration: none;
-    color: black;
+    color: white;
     padding: 15px;
 }
 
 nav a:hover {
-    background-color: #E5E7EB;
+    background-color: #282828;
     cursor: pointer;
 }
 
 .nav-active {
-    background-color: #E5E7EB;
+    background-color: #282828;
     border: 1px solid #ebc572;
 }
 
@@ -171,13 +172,30 @@ nav a:hover {
     z-index: 1;
 }
 
+.section#two\ about {
+    background-color: #282828;
+    color: white;
+}
+
+.section#three\ highlight-section {
+    color: white;
+}
+
 #two {
-    background-color: #F3F4F6;
+    background-color: #282828;
+}
+
+#two h2 {
+    color: white;
+}
+
+#two #subtitle-2 {
+    color: white;
 }
 
 
-#one, #three {
-    background-color: white;
+#three {
+    background-color: #121212;
 }
 
 #blob {
@@ -432,7 +450,7 @@ nav a:hover {
         margin: 0;
     }
 
-    nav li a, nav li img {
+    nav li a {
         display: block;
         padding: 12px 8px;
         font-size: 16px;
@@ -508,6 +526,7 @@ nav a:hover {
 
     #careers-p {
         text-align: center;
+        width: 100% !important;
     }
 
     .career-sign-up {
@@ -570,10 +589,10 @@ nav a:hover {
     }
 
     nav li img {
-        width: 0;
-        height: 0;
-        margin: 0;
-        padding: 0;
+        width: 0 !important;
+        height: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
     }
 
 }
@@ -767,4 +786,9 @@ body.modal-open {
 
 body.modal-open {
     overflow: hidden;
+}
+
+#careers-p {
+    color: white;
+    width: 60%;
 }
