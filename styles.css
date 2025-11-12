@@ -129,7 +129,6 @@
 /* Page Sectioning Styling */
 	.section {
 		padding: 80px;
-		border-bottom: 1px dotted black;
 		height: 400px;
 	}
 	
@@ -178,7 +177,21 @@
 		animation-duration: 4s;
 		cursor: zoom-in;
 	}
-	
+
+    #careers-img {
+        width: 800px;
+        height: auto;
+        margin-left: -30rem;
+        margin-top: -17rem;
+    }
+
+
+    #about-img {
+        width: 400px;
+        height: auto;
+        margin-top: -20rem;
+        margin-left: -20rem;
+    }
 
 
 /* Card Styling */
@@ -216,10 +229,105 @@
 				margin-left: 40%;
 				overflow: hidden;
 			}
+
+/* Package tiles on About page */
+.card-container .package {
+  flex: 1 1 240px;
+  max-width: 300px;
+  min-width: 200px;
+  height: auto;
+  box-shadow: none;
+  border-radius: 0;
+  background: transparent;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.card-container .package img {
+  width: 100% !important;
+  height: auto;
+  max-width: 260px;
+  max-height: 220px;
+  object-fit: contain;
+  margin: 0 auto !important;
+  display: block;
+}
+
+/* Packages slider */
+.packages-slider {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  margin: 20px auto;
+  overflow: hidden;
+}
+
+.packages-slider .slides {
+  display: flex;
+  transition: transform 0.4s ease;
+  will-change: transform;
+}
+
+.packages-slider .package {
+  flex: 0 0 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.packages-slider .package img {
+  display: block;
+  margin: 0 auto !important;
+  width: auto !important;
+  max-width: 85%;
+  height: auto;
+  max-height: 40vh;
+  object-fit: contain;
+}
+
+@media screen and (min-width: 1200px) {
+  .packages-slider .package img {
+    max-height: 460px;
+  }
+}
+
+.slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.45);
+  color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  font-size: 24px;
+  line-height: 48px;
+  text-align: center;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.slider-arrow.prev { left: 8px; }
+.slider-arrow.next { right: 8px; }
+
+.slider-arrow:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+#two\ about {
+    background-color: #F3F4F6;
+    padding-bottom: 300px;
+}
 	
 /* Responsive styles for devices under 600px */
 @media screen and (max-width: 600px) {
-  /* General styles */
   html, body {
     overflow-x: hidden;
     width: 100%;
@@ -227,11 +335,14 @@
     padding: 0;
     box-sizing: border-box;
   }
-  
-  /* Fix white space issue */
+
   * {
     max-width: 100%;
   }
+
+    #two\ about {
+        padding-bottom: 0;
+    }
 
   /* Section styling */
   .section {
@@ -282,6 +393,7 @@
 
   #nav-invite {
     display: inline-block;
+    margin-top: 15px;
   }
 
   /* Hero section */
@@ -336,7 +448,7 @@
     transform: none;
   }
 
-  .card-img {
+  .right-quarter-section {
     visibility: hidden;
     width: 0;
     height: 0;
@@ -346,9 +458,23 @@
       margin-left: 0;
   }
 
-  /* Articles section */
+    /* Make packages stack nicely and take full width on mobile */
+    .card-container .package {
+        width: 80%;
+        min-width: 0;
+        height: auto;
+        padding: 0;
+        margin: 0 0 16px 0;
+    }
+
+    .card-container .package img {
+        max-height: 180px;
+        max-width: 80%;
+    }
+
+
+    /* Articles section */
   #three {
-    height: auto;
     text-align: center;
   }
 
@@ -369,4 +495,29 @@
   .card-list {
       text-align: left;
   }
+
+  /* Slider images on mobile */
+  .packages-slider .package img {
+    /* Keep mobile comfortable and readable */
+    max-height: 42vh;
+    max-width: 95%;
+  }
+
+  .slider-arrow {
+    width: 44px;
+    height: 44px;
+    line-height: 44px;
+    font-size: 22px;
+  }
+
+  .section iframe {
+      height: 500%;
+  }
+}
+
+.quotes-ticker .quote-author {
+  display: block;
+  margin-top: 0.35em;
+  font-size: 0.9em;
+  color: #666666;
 }
