@@ -360,6 +360,7 @@ nav a:hover {
     justify-content: center;
     text-align: center;
     padding: 10px 0;
+    cursor: zoom-in; /* indicate expandable */
 }
 
 .packages-slider .package img {
@@ -381,6 +382,7 @@ nav a:hover {
     max-width: 400px;
     max-height: 400px;
     margin-left: 25%;
+    cursor: pointer; /* clickable like images */
 }
 
 
@@ -873,4 +875,33 @@ body.modal-open {
 #careers-p {
     color: white;
     width: 60%;
+}
+
+/* Lightbox content for packages */
+.modal-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-img {
+    display: block;
+    max-width: 100%;
+    max-height: 70vh;
+    height: auto;
+    width: auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+}
+
+.package-text-modal {
+    background: #8b7b58;
+    color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 720px;
+}
+
+.package-text-modal h2 {
+    margin-top: 0;
 }

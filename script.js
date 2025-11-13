@@ -120,6 +120,87 @@ const TICKER_DATA = {
 	update();
 })();
 
+// Lightbox for package slides (image expand + text details)
+(function initPackageLightbox() {
+    const slider = document.querySelector('.packages-slider');
+    if (!slider) return;
+
+    // Build modal once and reuse
+    const modal = document.createElement('div');
+    modal.className = 'modal';
+    modal.setAttribute('aria-hidden', 'true');
+    modal.innerHTML = `
+        <div class="modal-backdrop" data-close="true"></div>
+        <div class="modal-content" role="dialog" aria-modal="true" aria-label="Package preview">
+            <button class="modal-close" aria-label="Close preview" title="Close">×</button>
+            <div class="modal-body"></div>
+        </div>
+    `;
+    document.body.appendChild(modal);
+
+    const bodyEl = document.body;
+    const content = modal.querySelector('.modal-body');
+    const closeBtn = modal.querySelector('.modal-close');
+    const backdrop = modal.querySelector('.modal-backdrop');
+    let lastFocused = null;
+
+    function openModal(inner) {
+        lastFocused = document.activeElement;
+        content.innerHTML = '';
+        if (inner) content.appendChild(inner);
+        modal.classList.add('open');
+        modal.setAttribute('aria-hidden', 'false');
+        bodyEl.classList.add('modal-open');
+        closeBtn.focus();
+    }
+
+    function closeModal() {
+        modal.classList.remove('open');
+        modal.setAttribute('aria-hidden', 'true');
+        bodyEl.classList.remove('modal-open');
+        // return focus
+        if (lastFocused && typeof lastFocused.focus === 'function') {
+            lastFocused.focus();
+        }
+    }
+
+    closeBtn.addEventListener('click', closeModal);
+    backdrop.addEventListener('click', (e) => {
+        if (e.target === backdrop || e.target.getAttribute('data-close') === 'true') {
+            closeModal();
+        }
+    });
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.classList.contains('open')) {
+            closeModal();
+        }
+    });
+
+    // Delegate clicks from slides
+    slider.addEventListener('click', (e) => {
+        const slide = e.target.closest('.slides > .package');
+        if (!slide) return;
+
+        // If slide contains an image, show it larger
+        const img = slide.querySelector('img');
+        if (img) {
+            const big = document.createElement('img');
+            big.src = img.currentSrc || img.src;
+            big.alt = img.alt || 'Package image';
+            big.className = 'modal-img';
+            openModal(big);
+            return;
+        }
+
+        // Otherwise, render the text package content similarly
+        const clone = slide.cloneNode(true);
+        // Remove layout-related classes/attributes that don't matter in modal
+        clone.id = '';
+        clone.className = 'package-text-modal';
+        openModal(clone);
+    });
+})();
+
 // Sign Up modal with embedded Google Form
 (function initSignupModal() {
 	const FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSc9Vmn0sMtgHmpjqMRKOXrbCo3p8jcpQ9QbiQ589zLhLuWyHg/viewform?embedded=true';
