@@ -539,6 +539,7 @@ nav a:hover {
     .home-btn {
         width: 48px;
         height: 48px;
+        margin-bottom: 0 !important;
     }
 
     /* Hide the hook graphic (blob) on mobile */
