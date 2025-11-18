@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/full-logo.png">
+    <title>Catch-On Marketing - Instagram Services</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+</head>
+<body>
+
+<nav>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle"/>
+    <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation" aria-controls="primary-navigation"
+           aria-expanded="false">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </label>
+    <ul id="primary-navigation">
+        <li><img alt="logo" style="height: 50px; padding-bottom: 0;" src="./images/full-logo.png"></li>
+        <li><a href="index.html" id="nav-home">Home</a></li>
+        <li><a href="about.html" id="nav-about">About</a></li>
+        <li class="has-submenu" id="nav-services">
+            <button class="submenu-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="services-submenu">Services</button>
+            <ul id="services-submenu" class="submenu" role="menu">
+                <li role="none"><a role="menuitem" href="tech-services.html" id="nav-services-tech">Tech</a></li>
+                <li role="none"><a role="menuitem" href="instagram-services.html" id="nav-services-instagram" class="nav-active">Instagram</a></li>
+            </ul>
+        </li>
+        <li><a href="careers.html" id="nav-careers">Careers</a></li>
+
+        <li style="float: right;"><a href="https://www.instagram.com/catch.on.hooks/#" id="nav-invite"
+                                     class="request-btn">Scale Today</a></li>
+    </ul>
+</nav>
+
+<div class="section" id="one" style="--hero-bg: url('./images/instagram.jpg'); --hero-overlay: 0.55;">
+    <div class="quarter-section">
+        <h1>Instagram Services</h1>
+        <p id="subtitle">Explore our Instagram-focused services tailored to grow your brand and audience.</p>
+        <div class="cta-buttons">
+            <button class="request-btn" style="margin-top: 10px;"><a id="footer-invite" href="https://www.instagram.com/catch.on.hooks/#">Scale Today</a></button>
+            <a href="index.html" class="home-btn" aria-label="Home" title="Home" id="home-cta" style="margin-bottom: -10px;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                    <path d="M3 10.5L12 3l9 7.5"/>
+                    <path d="M5 10v10h14V10"/>
+                    <path d="M9 20v-6h6v6"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+    <div class="right-quarter-section"></div>
+    
+</div>
+
+<!-- Page scripts -->
+<script src="./script.js" defer></script>
+</body>
+</html>

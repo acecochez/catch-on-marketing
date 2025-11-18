@@ -11,6 +11,7 @@
 
 	<link rel="stylesheet" href="./styles.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
 
@@ -26,6 +27,14 @@
 		<li><img alt="logo" style="height: 50px; padding-bottom: 0;" src="./images/full-logo.png"></li>
 		<li><a href="index.html" id="nav-home">Home</a></li>
 		<li><a href="about.html" id="nav-about" class="nav-active">About</a></li>
+		<li class="has-submenu" id="nav-services">
+			<button class="submenu-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="services-submenu">
+				Services <i class="fas fa-arrow-down" style="font-size: 8px;"></i>
+			</button>
+			<ul id="services-submenu" class="submenu" role="menu">
+				<li role="none"><a role="menuitem" href="tech-services.html" id="nav-services-tech">Tech</a></li>
+			</ul>
+		</li>
 		<li><a href="careers.html" id="nav-careers">Careers</a></li>
 
 		<li style="float: right;">
@@ -39,13 +48,16 @@
 		<h1>Testimonials</h1>
 		<p id="subtitle">Have a look through our latest testimonials from our verified clients below!</p>
 		<!-- Simple quotes ticker populated by script.js -->
-		<div id="testimonials-ticker" class="quotes-ticker" aria-live="polite"></div>
+		<div id="testimonials-ticker" class="quotes-ticker" aria-live="polite" style="color: black !important;"></div>
 		<div class="cta-buttons">
 			<button class="request-btn" style="margin-top: 10px;">
 				<a id="footer-invite" href="https://www.instagram.com/catch.on.hooks/#">Scale Today</a>
 			</button>
-			<a href="index.html" class="home-btn" aria-label="Home" title="Home" id="home-cta">
-				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+			<a href="index.html" class="home-btn" aria-label="Home" title="Home" id="home-cta"
+			   style="margin-bottom: -10px;">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+				     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+				     aria-hidden="true" focusable="false">
 					<path d="M3 10.5L12 3l9 7.5"/>
 					<path d="M5 10v10h14V10"/>
 					<path d="M9 20v-6h6v6"/>
@@ -60,7 +72,8 @@
 <div class="section" id="two about">
 
 	<h2>Stages & Services</h2>
-	<p>Learn more about our official packages below. All packages are tailored to your needs and begin with a free chat about your goals.</p>
+	<p>Learn more about our official packages below. All packages are tailored to your needs and begin with a free chat
+		about your goals.</p>
 
 	<div class="packages-slider" aria-label="Packages slider">
 		<button class="slider-arrow prev" aria-label="Previous package" type="button">&#10094;</button>
@@ -87,11 +100,13 @@
 
 <div class="section" id="three highlight-section">
 	<div class="card-header" style="margin-bottom: 0;">Instagram highlights</div>
-	<div id="highlights" class='sk-ww-instagram-story-highlights-multiple' data-embed-id='25621496' style="border-top-left-radius: 0; border-top-right-radius: 0; padding: 10px; margin-left: -10px;"></div><script src='https://widgets.sociablekit.com/instagram-story-highlights-multiple/widget.js' defer></script>
+	<div id="highlights" class="sk-ww-instagram-story-highlights-multiple" data-embed-id="25621496"
+	     style="border-top-left-radius: 0; border-top-right-radius: 0; padding: 10px; margin-left: -10px;"></div>
+	<script src="https://widgets.sociablekit.com/instagram-story-highlights-multiple/widget.js" defer></script>
 </div>
 
 <!-- Page scripts -->
 <script src="./script.js" defer></script>
-<script src='https://www.noupe.com/embed/019a7c8dc71e731ea4ec0a61f2a3c63a8a50.js'></script>
+<script src="https://www.noupe.com/embed/019a7c8dc71e731ea4ec0a61f2a3c63a8a50.js"></script>
 </body>
 </html>

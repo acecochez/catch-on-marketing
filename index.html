@@ -11,6 +11,7 @@
 
 	<link rel="stylesheet" href="./styles.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
 
@@ -26,10 +27,19 @@
 		<li><img alt="logo" style="height: 50px; padding-bottom: 0;" src="./images/full-logo.png"></li>
 		<li><a href="index.html" id="nav-home" class="nav-active">Home</a></li>
 		<li><a href="about.html" id="nav-about">About</a></li>
+		<li class="has-submenu" id="nav-services">
+			<button class="submenu-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="services-submenu">
+				Services <i class="fas fa-arrow-down" style="font-size: 8px;"></i>
+			</button>
+			<ul id="services-submenu" class="submenu" role="menu">
+				<li role="none"><a role="menuitem" href="tech-services.html" id="nav-services-tech">Tech</a></li>
+			</ul>
+		</li>
 		<li><a href="careers.html" id="nav-careers">Careers</a></li>
 
-		<li style="float: right;"><a href="https://www.instagram.com/catch.on.hooks/#" id="nav-invite"
-		                             class="request-btn">Scale Today</a></li>
+		<li style="float: right;">
+			<a href="https://www.instagram.com/catch.on.hooks/#" id="nav-invite" class="request-btn">Scale Today</a>
+		</li>
 	</ul>
 </nav>
 
@@ -55,7 +65,8 @@
 <div class="section" id="two">
 
 	<h2>Why choose Catch-on?</h2>
-	<p id="subtitle-2">We leverage Instagram and custom websites to achieve your goals. Whether it's getting bookings, boosting your
+	<p id="subtitle-2">We leverage Instagram and custom websites to achieve your goals. Whether it's getting bookings,
+		boosting your
 		page numbers,
 		generating leads & more!</p>
 
@@ -159,6 +170,6 @@
 		});
 	})();
 </script>
-<script src='https://www.noupe.com/embed/019a7c8dc71e731ea4ec0a61f2a3c63a8a50.js'></script>
+<script src="https://www.noupe.com/embed/019a7c8dc71e731ea4ec0a61f2a3c63a8a50.js"></script>
 </body>
 </html>

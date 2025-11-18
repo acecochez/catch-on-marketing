@@ -11,6 +11,7 @@
 
 	<link rel="stylesheet" href="./styles.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 </head>
 <body>
@@ -27,13 +28,21 @@
 		<li><img alt="logo" style="height: 50px; padding-bottom: 0;" src="./images/full-logo.png"></li>
 		<li><a href="index.html" id="nav-home">Home</a></li>
 		<li><a href="about.html" id="nav-about">About</a></li>
+		<li class="has-submenu" id="nav-services">
+			<button class="submenu-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="services-submenu">
+				Services <i class="fas fa-arrow-down" style="font-size: 8px;"></i>
+			</button>
+			<ul id="services-submenu" class="submenu" role="menu">
+				<li role="none"><a role="menuitem" href="tech-services.html" id="nav-services-tech">Tech</a></li>
+			</ul>
+		</li>
 		<li><a href="careers.html" id="nav-careers" class="nav-active">Careers</a></li>
 
-		<li style="float: right;"><a href="https://www.instagram.com/catch.on.hooks/#" id="nav-invite"
-		                             class="request-btn">Scale Today</a></li>
+		<li style="float: right;">
+			<a href="https://www.instagram.com/catch.on.hooks/#" id="nav-invite" class="request-btn">Scale Today</a>
+		</li>
 	</ul>
 </nav>
-
 
 <div class="section" id="one" style="--hero-bg: url('./images/work.jpg'); --hero-overlay: 0.55;">
 
@@ -45,17 +54,18 @@
 			then be working with clients you generate.</p>
 
 		<div class="cta-buttons">
-		<button class="career-sign-up">Start Earning</button>
-		<a href="index.html" class="home-btn" aria-label="Home" title="Home" id="home-cta">
-			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
-				<path d="M3 10.5L12 3l9 7.5"/>
-				<path d="M5 10v10h14V10"/>
-				<path d="M9 20v-6h6v6"/>
-			</svg>
-		</a>
+			<button class="career-sign-up">Start Earning</button>
+			<a href="index.html" class="home-btn" aria-label="Home" title="Home" id="home-cta">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+				     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+				     aria-hidden="true" focusable="false">
+					<path d="M3 10.5L12 3l9 7.5"/>
+					<path d="M5 10v10h14V10"/>
+					<path d="M9 20v-6h6v6"/>
+				</svg>
+			</a>
+		</div>
 	</div>
-	</div>
-
 
 
 	<div class="right-quarter-section"></div>

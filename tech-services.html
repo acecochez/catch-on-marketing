@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- displays site properly based on user's device -->
+
+	<link rel="icon" type="image/png" sizes="32x32" href="./images/full-logo.png">
+
+	<title>Catch On Creative Sites and Smart Tech Services</title>
+
+	<link rel="stylesheet" href="./styles.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<nav>
+	<input type="checkbox" id="nav-toggle" class="nav-toggle"/>
+	<label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation" aria-controls="primary-navigation"
+	       aria-expanded="false">
+		<span class="bar"></span>
+		<span class="bar"></span>
+		<span class="bar"></span>
+	</label>
+	<ul id="primary-navigation">
+		<li><img alt="logo" style="height: 50px; padding-bottom: 0;" src="./images/full-logo.png"></li>
+		<li><a href="index.html" id="nav-home">Home</a></li>
+		<li><a href="about.html" id="nav-about">About</a></li>
+		<li class="has-submenu" id="nav-services">
+			<button class="submenu-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="services-submenu">
+				Services <i class="fas fa-arrow-down" style="font-size: 8px;"></i>
+			</button>
+			<ul id="services-submenu" class="submenu" role="menu">
+				<li role="none"><a role="menuitem" href="tech-services.html" id="nav-services-tech" class="nav-active">Tech</a>
+				</li>
+			</ul>
+		</li>
+		<li><a href="careers.html" id="nav-careers">Careers</a></li>
+
+		<li style="float: right;">
+			<a href="https://www.instagram.com/catch.on.hooks/#" id="nav-invite" class="request-btn">Scale Today</a>
+		</li>
+	</ul>
+</nav>
+
+<div class="section" id="one" style="--hero-bg: url('./images/tech-services.jpg'); --hero-overlay: 0.55;">
+	<div class="quarter-section">
+		<h1>Catch On Creative Sites and Smart Tech Services</h1>
+		<p id="subtitle">Fast build times, clean design, and practical features shaped around your goals</p>
+		<div class="cta-buttons">
+			<button class="request-btn" style="margin-top: 10px;">
+				<a id="footer-invite" href="https://www.instagram.com/catch.on.hooks/#">Scale Today</a>
+			</button>
+			<a href="index.html" class="home-btn" aria-label="Home" title="Home" id="home-cta"
+			   style="margin-bottom: -10px;">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+				     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+				     aria-hidden="true" focusable="false">
+					<path d="M3 10.5L12 3l9 7.5"/>
+					<path d="M5 10v10h14V10"/>
+					<path d="M9 20v-6h6v6"/>
+				</svg>
+			</a>
+		</div>
+	</div>
+	<div class="right-quarter-section"></div>
+
+</div>
+
+<!-- Section Navigation -->
+<div id="tech-services-sections">
+	<!-- Local section navigation -->
+	<nav class="section-tabs" aria-label="Tech services section navigation">
+		<a id="services-tab" class="tab-link active">Services</a>
+		<a id="inclusions-tab" class="tab-link">Integrations</a>
+		<a id="process-tab" class="tab-link">Process</a>
+		<a id="ownership-tab" class="tab-link">Hosting</a>
+		<a id="pricing-tab" class="tab-link">Pricing</a>
+	</nav>
+</div>
+
+<!-- Services Overview -->
+<div class="section" id="services">
+	<h2>Services Overview</h2>
+	<div class="card-container" id="services-overview">
+		<div class="card">
+			<div class="card-header">Full Website</div>
+			<h3>A complete presence built around your brand</h3>
+			<ul class="card-list">
+				<li>Free idea consultation</li>
+				<li>One time payment*</li>
+				<li>Perfect for landing pages, multi section sites, and tailored layouts</li>
+			</ul>
+			<p style="color: red; font-style: italic; font-size: 12px; padding: 0;">*See pricing</p>
+			<div class="turnaround-highlight">
+				<i class="fas fa-clock"></i>
+				<span>Average Turnaround: 5 Days</span>
+			</div>
+		</div>
+		<div class="card">
+			<div class="card-header">Portfolio Site</div>
+			<h3>A sharp personal showcase crafted for employers and clients</h3>
+			<ul class="card-list">
+				<li>Free skills and positioning analysis</li>
+				<li>One time payment*</li>
+				<li>Focused on visual clarity, personal branding, and credibility</li>
+			</ul>
+			<p style="color: red; font-style: italic; font-size: 12px; padding: 0;">*See pricing</p>
+			<div class="turnaround-highlight">
+				<i class="fas fa-clock"></i>
+				<span>Average Turnaround: 3 Days</span>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Ownership and Hosting Options -->
+<div class="section" id="ownership">
+	<h2>Ownership and Hosting Options</h2>
+	<div class="card-container" id="ownership-options">
+		<div class="card code-interface-card">
+			<div class="code-header">
+				<span class="code-dot red"></span>
+				<span class="code-dot yellow"></span>
+				<span class="code-dot green"></span>
+				<span class="code-title">hosting-options.txt</span>
+			</div>
+			<div class="code-content">
+				<div class="code-section">
+					<div class="code-section-title" style="color: darkorange !important;">Default Hosting</div>
+					<p style="color: greenyellow">Your project is hosted on Vercel with a format like
+						your-website.vercel.app. Hosting access is not included unless you choose a paid hosting
+						plan.</p>
+				</div>
+				<div class="code-section">
+					<div class="code-section-title">Full Control Option</div>
+					<p style="color: hotpink">If you want complete ownership, we can publish through GitHub Pages and
+						transfer the repository directly to you. This gives you full access to the codebase and all
+						future control over hosting.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- How the Build Process Works -->
+<div class="section" id="process">
+	<div class="process-flow-card">
+		<div class="card-header">How the Build Process Works</div>
+		<ul class="process-flow-list">
+			<li>You sign the commitment to have your idea created</li>
+			<li>We confirm your specifications and produce the first iteration</li>
+			<li>You can request any changes until the design matches your expectations</li>
+			<li>Before payment, you will receive a demo video</li>
+			<li>Once you are satisfied and complete payment, you receive the live link along with full code ownership
+				(if
+				requested)
+			</li>
+		</ul>
+	</div>
+</div>
+
+<!-- What We Can Include -->
+<div class="section" id="inclusions">
+	<h2>Smart Integrations</h2>
+	<p class="subtitle">We offer a selection of special integrations to help you get leads, interactions & more from
+		your website!</p>
+	<div class="card-container" id="inclusions-cards">
+		<div class="card">
+			<div class="card-header">Smart Integrations</div>
+			<ul class="card-list">
+				<li>Social media links</li>
+				<li>Live displays of your recent posts</li>
+				<li>Booking and scheduling features</li>
+				<li>Contact forms that send messages directly to your email</li>
+			</ul>
+		</div>
+		<div class="card">
+			<div class="card-header">Project Scope</div>
+			<p>Database integrations, payment systems, or advanced functionality may be subject to additional pricing
+				and further technical review, they also may extend average turnover time by 1-2 days.</p>
+		</div>
+
+
+		<!-- Integration Demonstration Cards -->
+		<div class="integration-demos">
+			<div class="demo-card">
+				<div class="card-header">Social Links</div>
+				<div class="demo-content">
+					<a href="https://www.instagram.com/catch.on.hooks/#" class="social-demo-link"><i
+							class="fab fa-instagram"></i> Instagram</a>
+				</div>
+			</div>
+
+			<div class="demo-card">
+				<div class="card-header">Booking Widget</div>
+				<div class="demo-content">
+					<div class="booking-demo">
+						<i class="fas fa-calendar-alt" style="font-size: 2rem; color: #ebc572;"></i>
+						<p>Schedule Appointment</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="demo-card">
+				<div class="card-header">Contact Form</div>
+				<div class="demo-content">
+					<div class="form-demo">
+						<input type="text" placeholder="Name" disabled>
+						<input type="email" placeholder="Email" disabled>
+						<textarea placeholder="Message" disabled></textarea>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Pricing -->
+<div class="section" id="pricing">
+	<div class="card-container" id="pricing-cards">
+		<div class="card pricing-card">
+			<div class="card-header">Portfolio</div>
+			<div class="pricing-tier">
+				<div class="price-item">
+					<div class="price-badge">£35</div>
+					<div class="price-label">Basic Display</div>
+					<p class="price-description">Essential portfolio layout</p>
+				</div>
+				<div class="price-divider"></div>
+				<div class="price-item">
+					<div class="price-badge featured">£50</div>
+					<div class="price-label">Standard Package</div>
+					<p class="price-description">Complete professional showcase</p>
+				</div>
+				<div class="price-divider"></div>
+				<div class="price-item custom">
+					<div class="price-badge">Custom</div>
+					<div class="price-label">Tailored Solution</div>
+					<p class="price-description">Contact us for personalized pricing</p>
+				</div>
+			</div>
+		</div>
+		<div class="card pricing-card">
+			<div class="card-header">Website</div>
+			<div class="pricing-tier">
+				<div class="price-item">
+					<div class="price-badge">£50</div>
+					<div class="price-label">Single Landing Page</div>
+					<p class="price-description">Focused single-page site</p>
+				</div>
+				<div class="price-divider"></div>
+				<div class="price-item">
+					<div class="price-badge featured">£175</div>
+					<div class="price-label">Full Site Package</div>
+					<p class="price-description">Multi-page complete website</p>
+				</div>
+				<div class="price-divider"></div>
+				<div class="price-item custom">
+					<div class="price-badge">Custom</div>
+					<div class="price-label">Webapp Package</div>
+					<p class="price-description">Contact us for advanced features</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Page scripts -->
+<script src="./script.js" defer></script>
+</body>
+</html>
