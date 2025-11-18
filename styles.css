@@ -377,6 +377,38 @@ nav a:hover {
     transform: scale(1.05);
 }
 
+/* Turnaround highlight mini-card styling */
+.turnaround-highlight {
+    background: linear-gradient(135deg, #a2d6f9, #60b6fb);
+    color: #111111;
+    padding: 8px 10px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: auto;
+    box-shadow: 0 3px 10px rgba(235, 197, 114, 0.3);
+    border: 2px solid #a2d6f9;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    width: 45%;
+}
+
+.turnaround-highlight:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(235, 197, 114, 0.5);
+}
+
+.turnaround-highlight i {
+    font-size: 18px;
+    color: #111111;
+}
+
+.turnaround-highlight span {
+    font-size: 14px;
+    font-weight: 600;
+}
+
 /* Ownership & Hosting Options: larger white cards with dark text */
 #ownership-options {
     flex-wrap: wrap;
