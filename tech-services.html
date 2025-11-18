@@ -121,15 +121,23 @@
 <div class="section" id="ownership">
     <h2>Ownership and Hosting Options</h2>
     <div class="card-container" id="ownership-options">
-        <div class="card">
-            <div class="card-header">Default Hosting</div>
-			<p>Your project is hosted on Vercel with a format like your-website.vercel.app. Hosting access is not
-				included unless you choose a paid hosting plan.</p>
-		</div>
-		<div class="card">
-			<div class="card-header">Full Control Option</div>
-			<p>If you want complete ownership, we can publish through GitHub Pages and transfer the repository directly
-				to you. This gives you full access to the codebase and all future control over hosting.</p>
+        <div class="card code-interface-card">
+            <div class="code-header">
+                <span class="code-dot red"></span>
+                <span class="code-dot yellow"></span>
+                <span class="code-dot green"></span>
+                <span class="code-title">hosting-options.txt</span>
+            </div>
+            <div class="code-content">
+                <div class="code-section">
+                    <div class="code-section-title" style="color: darkorange !important;">Default Hosting</div>
+                    <p style="color: greenyellow">Your project is hosted on Vercel with a format like your-website.vercel.app. Hosting access is not included unless you choose a paid hosting plan.</p>
+                </div>
+                <div class="code-section">
+                    <div class="code-section-title">Full Control Option</div>
+                    <p style="color: hotpink">If you want complete ownership, we can publish through GitHub Pages and transfer the repository directly to you. This gives you full access to the codebase and all future control over hosting.</p>
+                </div>
+            </div>
 		</div>
 	</div>
 </div>
@@ -158,7 +166,7 @@
         <div class="card">
             <div class="card-header">Smart Integrations</div>
             <ul class="card-list">
-                <li><a href="https://www.instagram.com/catch.on.hooks/#">Social media links</a></li>
+                <li>Social media links</li>
                 <li>Live displays of your recent posts</li>
 				<li>Booking and scheduling features</li>
 				<li>Contact forms that send messages directly to your email</li>
@@ -169,33 +177,86 @@
 			<p>Database integrations, payment systems, or advanced functionality may be subject to additional pricing and further technical review, they also may extend average turnover time by 1-2 days.</p>
 		</div>
 
-	    <div class="section" id="three highlight-section">
-		    <div class="card-header" style="margin-bottom: 0;">Smart Integration: Instagram Highlights</div>
-		    <div id="highlights" class='sk-ww-instagram-story-highlights-multiple' data-embed-id='25621496' style="border-top-left-radius: 0; border-top-right-radius: 0; padding: 10px; margin-left: -10px;"></div>
-		    <script src='https://widgets.sociablekit.com/instagram-story-highlights-multiple/widget.js' defer></script>
+
+	    <!-- Integration Demonstration Cards -->
+	    <div class="integration-demos">
+		    <div class="demo-card">
+			    <div class="card-header">Social Links</div>
+			    <div class="demo-content">
+				    <a href="https://www.instagram.com/catch.on.hooks/#" class="social-demo-link"><i class="fab fa-instagram"></i> Instagram</a>
+			    </div>
+		    </div>
+
+		    <div class="demo-card">
+			    <div class="card-header">Booking Widget</div>
+			    <div class="demo-content">
+				    <div class="booking-demo">
+					    <i class="fas fa-calendar-alt" style="font-size: 2rem; color: #ebc572;"></i>
+					    <p>Schedule Appointment</p>
+				    </div>
+			    </div>
+		    </div>
+
+		    <div class="demo-card">
+			    <div class="card-header">Contact Form</div>
+			    <div class="demo-content">
+				    <div class="form-demo">
+					    <input type="text" placeholder="Name" disabled>
+					    <input type="email" placeholder="Email" disabled>
+					    <textarea placeholder="Message" disabled></textarea>
+				    </div>
+			    </div>
+		    </div>
 	    </div>
 	</div>
 </div>
 
 <!-- Pricing -->
 <div class="section" id="pricing">
-    <h2>Pricing</h2>
     <div class="card-container" id="pricing-cards">
-        <div class="card">
+        <div class="card pricing-card">
             <div class="card-header">Portfolio</div>
-            <ul class="card-list">
-                <li>£35 basic display</li>
-                <li>£50 standard package</li>
-				<li>Contact us for a tailored solution</li>
-			</ul>
+            <div class="pricing-tier">
+                <div class="price-item">
+                    <div class="price-badge">£35</div>
+                    <div class="price-label">Basic Display</div>
+                    <p class="price-description">Essential portfolio layout</p>
+                </div>
+                <div class="price-divider"></div>
+                <div class="price-item">
+                    <div class="price-badge featured">£50</div>
+                    <div class="price-label">Standard Package</div>
+                    <p class="price-description">Complete professional showcase</p>
+                </div>
+                <div class="price-divider"></div>
+                <div class="price-item custom">
+                    <div class="price-badge">Custom</div>
+                    <div class="price-label">Tailored Solution</div>
+                    <p class="price-description">Contact us for personalized pricing</p>
+                </div>
+			</div>
 		</div>
-		<div class="card">
+		<div class="card pricing-card">
 			<div class="card-header">Website</div>
-			<ul class="card-list">
-				<li>£50 single landing page</li>
-				<li>£175 full site package</li>
-				<li>Contact us for a custom webapp package</li>
-			</ul>
+			<div class="pricing-tier">
+                <div class="price-item">
+                    <div class="price-badge">£50</div>
+                    <div class="price-label">Single Landing Page</div>
+                    <p class="price-description">Focused single-page site</p>
+                </div>
+                <div class="price-divider"></div>
+                <div class="price-item">
+                    <div class="price-badge featured">£175</div>
+                    <div class="price-label">Full Site Package</div>
+                    <p class="price-description">Multi-page complete website</p>
+                </div>
+                <div class="price-divider"></div>
+                <div class="price-item custom">
+                    <div class="price-badge">Custom</div>
+                    <div class="price-label">Webapp Package</div>
+                    <p class="price-description">Contact us for advanced features</p>
+                </div>
+			</div>
 		</div>
 	</div>
 </div>
