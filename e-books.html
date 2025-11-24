@@ -8,6 +8,11 @@
     <link rel="stylesheet" href="./styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+	<script
+			src="https://www.paypal.com/sdk/js?client-id=BAAB-KQfur8qc6UGSkPH8zEFaJ9zvEKV9bnMumxjEWk2jAvxIi2OPBEMFou6uM374xw6tJSzYi5Y9TJNHQ&components=hosted-buttons&disable-funding=venmo&currency=GBP">
+	</script>
+
 </head>
 <body>
 
@@ -43,9 +48,9 @@
 
 <div class="section" id="one" style="--hero-bg: url('./images/home.jpg'); --hero-overlay: 0.55;">
     <div class="quarter-section">
-        <h1>E-Books</h1>
-        <p id="subtitle">Curated resources to help you grow your brand, sharpen your content, and convert attention
-            into results.</p>
+        <div class="card-header" style="width: fit-content;">Featured E-book</div>
+        <h1>Branding that Hooks | E-book</h1>
+        <p id="subtitle">We just launched a new E-Book curated to helping you launch a successful Instagram page. An essential guide to help you understand the algorithm.</p>
         <div class="cta-buttons">
             <button class="request-btn" style="margin-top: 10px;">
                 <a id="footer-invite" href="https://www.instagram.com/catch.on.hooks/#">Scale Today</a>
@@ -62,41 +67,20 @@
     <div class="right-quarter-section"></div>
 </div>
 
-<div class="section" id="two">
-    <h2>Our E-Books</h2>
-    <p id="subtitle-2">This page is prepared for upcoming downloadable guides and playbooks. Check back soon for
-        actionable resources covering Instagram growth, website best practices, and content strategy.</p>
+<div class="section" id="two" style="height: 120%;">
+	<div id="paypal-container-W69SYLQWKMWLS"></div>
+	<script>
+		paypal.HostedButtons ({
+			hostedButtonId: 'W69SYLQWKMWLS',
+		}).render ('#paypal-container-W69SYLQWKMWLS');
+	</script>
+</div>
 
-    <!-- Placeholder grid ready for future content -->
-    <div class="card-container">
-        <div class="card">
-            <div class="card-header">Coming Soon</div>
-            <h3>Instagram Growth Playbook</h3>
-            <ul class="card-list">
-                <li>Profile optimization</li>
-                <li>Content frameworks</li>
-                <li>Growth systems</li>
-            </ul>
-        </div>
-        <div class="card">
-            <div class="card-header">Coming Soon</div>
-            <h3>Website Conversion Guide</h3>
-            <ul class="card-list">
-                <li>Landing page structure</li>
-                <li>Copywriting tips</li>
-                <li>Analytics essentials</li>
-            </ul>
-        </div>
-        <div class="card">
-            <div class="card-header">Coming Soon</div>
-            <h3>Content System Toolkit</h3>
-            <ul class="card-list">
-                <li>Editorial calendar</li>
-                <li>Hook formulas</li>
-                <li>Batching workflow</li>
-            </ul>
-        </div>
-    </div>
+<div class="section" id="three">
+    <h2>Testimonials</h2>
+    <p id="subtitle-2">A selection of clients purchased this E-Book to review before we launched it, here's what a few had to say:</p>
+    <!-- Simple quotes ticker populated by script.js -->
+    <div id="testimonials-ticker" class="quotes-ticker" aria-live="polite" style="color: black !important;"></div>
 </div>
 
 <!-- Page scripts -->
