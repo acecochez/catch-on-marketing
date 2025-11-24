@@ -1473,6 +1473,94 @@ nav a:hover {
     }
 }
 
+/* Responsive tuning for medium devices (tablets/smaller laptops)
+   Covers 601px–1300px to keep text proportional and avoid overflow */
+@media screen and (min-width: 601px) and (max-width: 1300px) {
+    /* Slightly reduce global sizing and paddings */
+    body {
+        font-size: 15px; /* base tune for paragraphs and generic text */
+    }
+
+    .section {
+        padding: 60px; /* down from 80px to fit shorter widths */
+        height: auto;  /* let sections size naturally */
+    }
+
+    /* Hero area text sizes */
+    #one {
+        font-size: 18px; /* down from 20px */
+    }
+    h2 { /* section headings */
+        font-size: 26px; /* down from 30px */
+    }
+    .quarter-section h1 {
+        font-size: 34px; /* ensure long lines wrap less aggressively */
+        line-height: 1.15;
+    }
+    #one #subtitle {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    /* Make the left hero quarter slightly wider for text comfort */
+    .quarter-section {
+        width: 32%; /* was 25% */
+    }
+    /* Keep the right side from crowding; allow some balance */
+    .right-quarter-section {
+        width: 25%;
+    }
+
+    /* CTA buttons scale down a bit and avoid fixed widths */
+    .request-btn, .career-sign-up {
+        padding: 12px 16px;
+        width: auto;         /* remove 200px constraint in this range */
+        font-size: 18px;     /* down from 20px */
+        white-space: nowrap; /* prevent multi-line buttons */
+    }
+    .cta-buttons {
+        gap: 10px;
+    }
+
+    /* Navigation readability adjustments */
+    nav a {
+        padding: 12px; /* slightly tighter to reduce wrapping */
+        font-size: 15px;
+    }
+
+    /* Cards and pricing: scale typography to prevent push/overflow */
+    .card h3 {
+        font-size: 18px;
+    }
+    .card {
+        padding: 16px 18px;
+    }
+    .card:hover {
+        transform: scale(1.08); /* reduce hover pop so it doesn’t overlap */
+    }
+
+    .price-badge {
+        font-size: 22px;
+        padding: 8px 16px;
+    }
+    .price-label {
+        font-size: 16px;
+    }
+    .price-description {
+        font-size: 13px;
+    }
+
+    /* Package visuals */
+    .packages-slider .package img {
+        max-width: 88%;
+        max-height: 38vh;
+    }
+    #text-package {
+        max-width: 360px;
+        margin-left: 20%;
+    }
+}
+
 .quotes-ticker .quote-author {
     display: block;
     margin-top: 0.35em;
