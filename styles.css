@@ -231,7 +231,8 @@ nav a:hover {
 }
 
 .right-quarter-section {
-    width: 25%;
+    margin-top: -25%;
+    width: 30%;
     float: right;
 }
 
@@ -243,6 +244,64 @@ nav a:hover {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+#one.ebooks-hero {
+    --hero-overlay: 0.35;
+    background-image:
+            radial-gradient(1200px 400px at 85% 40%, rgba(235,197,114,0.28), rgba(235,197,114,0) 60%),
+            radial-gradient(800px 300px at 20% 10%, rgba(255,222,173,0.22), rgba(255,222,173,0) 60%),
+            conic-gradient(from 210deg at 70% 30%, rgba(235,197,114,0.15), rgba(0,0,0,0) 25%, rgba(235,197,114,0.25) 35%, rgba(0,0,0,0) 60%, rgba(235,197,114,0.1) 100%),
+            repeating-linear-gradient(135deg, rgba(235,197,114,0.06) 0 2px, rgba(0,0,0,0.02) 2px 6px),
+            linear-gradient(180deg, #ebc572 0%, #111 100%);
+    background-blend-mode: screen, screen, normal, overlay, normal;
+}
+
+#one.ebooks-hero .hero-art {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+/* Ensure the right visual column fills the hero height and centers content */
+#one.ebooks-hero .right-quarter-section {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#one.ebooks-hero .logo-pulse {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    filter: drop-shadow(0 6px 16px rgba(235,197,114,0.35));
+    animation: pulseGlow 2.8s ease-in-out infinite;
+}
+
+#one.ebooks-hero .book-float {
+    width: 160px;
+    height: auto;
+    transform-origin: 60% 50%;
+    filter: drop-shadow(0 10px 22px rgba(0,0,0,0.45));
+    animation: floatY 5.5s ease-in-out infinite, tilt 6.5s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+    0%, 100% { transform: scale(1); filter: drop-shadow(0 6px 16px rgba(235,197,114,0.35)); }
+    50% { transform: scale(1.06); filter: drop-shadow(0 10px 24px rgba(235,197,114,0.55)); }
+}
+
+@keyframes floatY {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+}
+
+@keyframes tilt {
+    0%, 100% { rotate: -2deg; }
+    50% { rotate: 3deg; }
 }
 
 .section#one::before {
@@ -1243,6 +1302,13 @@ nav a:hover {
         flex-direction: column-reverse;
         font-size: 16px;
     }
+
+    /* E-Books hero responsive tweaks */
+    #one.ebooks-hero .hero-art {
+        padding: 10px 0 0;
+    }
+    #one.ebooks-hero .logo-pulse { width: 80px; height: 80px; }
+    #one.ebooks-hero .book-float { width: 120px; animation-duration: 5.2s, 6.2s; }
 
     .quarter-section {
         width: 100%;
