@@ -282,11 +282,24 @@ nav a:hover {
 }
 
 #one.ebooks-hero .book-float {
-    width: 160px;
-    height: auto;
+    /* Common animation/visuals for both image and icon */
+    display: inline-block;
     transform-origin: 60% 50%;
     filter: drop-shadow(0 10px 22px rgba(0,0,0,0.45));
     animation: floatY 5.5s ease-in-out infinite, tilt 6.5s ease-in-out infinite;
+}
+
+/* Image sizing stays as before */
+#one.ebooks-hero img.book-float {
+    width: 160px;
+    height: auto;
+}
+
+/* Font Awesome book icon sizing and color to match visual weight */
+#one.ebooks-hero i.book-float {
+    font-size: 160px;
+    line-height: 1;
+    color: #ebc572;
 }
 
 @keyframes pulseGlow {
@@ -1308,7 +1321,10 @@ nav a:hover {
         padding: 10px 0 0;
     }
     #one.ebooks-hero .logo-pulse { width: 80px; height: 80px; }
-    #one.ebooks-hero .book-float { width: 120px; animation-duration: 5.2s, 6.2s; }
+    /* Mobile sizing and slightly tweaked animation speed */
+    #one.ebooks-hero img.book-float { width: 120px; }
+    #one.ebooks-hero i.book-float { font-size: 120px; }
+    #one.ebooks-hero .book-float { animation-duration: 5.2s, 6.2s; }
 
     .quarter-section {
         width: 100%;
