@@ -1845,6 +1845,7 @@ body.modal-open {
 }
 
 .modal-body {
+    /* Merge of duplicate .modal-body definitions to avoid redundancy */
     flex: 1;
 }
 
@@ -1864,12 +1865,7 @@ body.modal-open {
     width: 60%;
 }
 
-/* Lightbox content for packages */
-.modal-body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+/* Lightbox content for packages (merged into single definition above) */
 
 .modal-img {
     display: block;
